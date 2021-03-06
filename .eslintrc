@@ -1,0 +1,7 @@
+{
+  "rules": {
+    "no-unused-vars": "error",
+    "no-await-in-loop": "error"
+  },
+  "parser": "@typescript-eslint/eslint-plugin"
+}
