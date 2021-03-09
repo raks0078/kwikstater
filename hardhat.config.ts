@@ -3,6 +3,7 @@ import { config } from "dotenv";
 import "hardhat-docgen";
 import "@nomiclabs/hardhat-etherscan";
 import "@openzeppelin/hardhat-upgrades";
+import "@nomiclabs/hardhat-ethers";
 
 /**
  * @type import('hardhat/config').HardhatUserConfig

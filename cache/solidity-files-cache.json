@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/home/bhupendra/bscpad-contracts/contracts/BSCLAUNCHPAD.sol": {
-      "lastModificationDate": 1615017706128,
-      "contentHash": "817eceff9b70b127371ebaaa135da321",
+      "lastModificationDate": 1615020076169,
+      "contentHash": "5df91a994cd08087016625556a640e1a",
       "sourceName": "contracts/BSCLAUNCHPAD.sol",
       "solcConfig": {
         "version": "0.7.4",
@@ -32,7 +32,7 @@
       "imports": [
         "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol",
         "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
-        "@openzeppelin/contracts/utils/Address.sol",
+        "./library/Address.sol",
         "@openzeppelin/contracts/math/SafeMath.sol"
       ],
       "versionPragmas": [
@@ -376,6 +376,42 @@
       ],
       "artifacts": [
         "AddressUpgradeable"
+      ]
+    },
+    "/home/bhupendra/bscpad-contracts/contracts/library/Address.sol": {
+      "lastModificationDate": 1615020059133,
+      "contentHash": "60f9bcdc2d696ad2f27d99fd00eef6d8",
+      "sourceName": "contracts/library/Address.sol",
+      "solcConfig": {
+        "version": "0.7.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "devdoc",
+                "userdoc"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.2 <0.8.0"
+      ],
+      "artifacts": [
+        "Address"
       ]
     }
   }

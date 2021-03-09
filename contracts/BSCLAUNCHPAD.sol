@@ -4,7 +4,7 @@ pragma solidity ^0.7.4;
 
 import "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
-import "@openzeppelin/contracts/utils/Address.sol";
+import "./library/Address.sol";
 import "@openzeppelin/contracts/math/SafeMath.sol";
 
 contract BSCPAD is ERC20Upgradeable, OwnableUpgradeable {
@@ -12,7 +12,6 @@ contract BSCPAD is ERC20Upgradeable, OwnableUpgradeable {
     using SafeMath for uint256;
     // using Address for `address`
     using Address for address;
-
     
     uint256 public _launchBlock;
     uint256 public _launchTimestamp;
@@ -25,19 +24,19 @@ contract BSCPAD is ERC20Upgradeable, OwnableUpgradeable {
     mapping (address => bool) public _isExchanger;
 
     function initialize (uint256 _totalSupply) public initializer {
-         __ERC20_init("BSCPAD.com", "BSCPAD");
+         __ERC20_init("BSCPOOL", "BSCPOOL");
          __Ownable_init(); 
 
          _whiteListSeconds = 300; // 5min
-
          // mint total supply to owner address
           _mint(_msgSender(), _totalSupply);  
     }
-
+    // set Exchanger
     function setExchanger(address account, bool exchanger) public onlyOwner {
         _isExchanger[account] = exchanger;
     }
 
+    
     function setLaunchWhiteList(uint256 whiteListSeconds, address[] calldata whiteListAddresses, uint256[] calldata whiteListAmounts) external onlyOwner() {
         require(whiteListAddresses.length == whiteListAmounts.length, "Invalid whitelist");
         
