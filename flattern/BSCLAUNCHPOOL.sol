@@ -1235,18 +1235,20 @@ pragma solidity ^0.7.4;
 
 
 
-contract BSCPAD is ERC20Upgradeable, OwnableUpgradeable {
+contract BSCPOOL is ERC20Upgradeable, OwnableUpgradeable {
     // using safe math for `uint256`
     using SafeMath for uint256;
     // using Address for `address`
     using Address for address;
-    
+    // launch block
     uint256 public _launchBlock;
+    // launch timestamp
     uint256 public _launchTimestamp;
-
+    // white list seconds
     uint256 public _whiteListSeconds;
-
+    // WhiteList Amount
     mapping (address => uint256) public _whiteListAmounts;
+    // WhiteList Purchase Mapping
     mapping (address => uint256) public _whiteListPurchases;
 
     mapping (address => bool) public _isExchanger;
@@ -1264,7 +1266,7 @@ contract BSCPAD is ERC20Upgradeable, OwnableUpgradeable {
         _isExchanger[account] = exchanger;
     }
 
-    
+    //    
     function setLaunchWhiteList(uint256 whiteListSeconds, address[] calldata whiteListAddresses, uint256[] calldata whiteListAmounts) external onlyOwner() {
         require(whiteListAddresses.length == whiteListAmounts.length, "Invalid whitelist");
         
