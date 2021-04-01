@@ -1,12 +1,16 @@
+import { ContractFactory } from "@ethersproject/contracts";
 import { ethers, upgrades } from "hardhat";
 
 async function main() {
-  const BSCLAUNCHPAD = await ethers.getContractFactory("BSCPAD");
-  const bsc = await upgrades.deployProxy(BSCLAUNCHPAD, ["1750000000000000000000000"], {
+  const kwikStater: ContractFactory = await ethers.getContractFactory("KwikStater");
+  const totalSupply = ethers.utils.parseUnits("1000000");
+
+  const kwik = await upgrades.deployProxy(kwikStater, [totalSupply], {
     initializer: "initialize",
   });
-  await bsc.deployed();
-  console.log(`The Contract is Deployed on ${bsc.address}`);
+
+  await kwik.deployed();
+  console.log(`The Contract is Deployed on ${kwik.address}`);
 }
 
 main();

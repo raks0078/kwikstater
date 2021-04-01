@@ -1,5 +1,6 @@
 import { HardhatUserConfig } from "hardhat/config";
 import { config } from "dotenv";
+
 import "hardhat-docgen";
 import "@nomiclabs/hardhat-etherscan";
 import "@openzeppelin/hardhat-upgrades";
