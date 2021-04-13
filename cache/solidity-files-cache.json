@@ -6,7 +6,7 @@
       "contentHash": "3db892e4d93e69646cc305714fc3b789",
       "sourceName": "contracts/bep20/BEP20Upgradeable.sol",
       "solcConfig": {
-        "version": "0.7.4",
+        "version": "0.7.6",
         "settings": {
           "optimizer": {
             "enabled": true,
@@ -44,7 +44,7 @@
       "contentHash": "4404d773c16609e9c316b0acaa487556",
       "sourceName": "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol",
       "solcConfig": {
-        "version": "0.7.4",
+        "version": "0.7.6",
         "settings": {
           "optimizer": {
             "enabled": true,
@@ -85,7 +85,7 @@
       "contentHash": "9f901c17a18eadc08042b6a510da3b7d",
       "sourceName": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol",
       "solcConfig": {
-        "version": "0.7.4",
+        "version": "0.7.6",
         "settings": {
           "optimizer": {
             "enabled": true,
@@ -123,7 +123,7 @@
       "contentHash": "6c8edd65243ec9d6eb91cc63cce2cd16",
       "sourceName": "@openzeppelin/contracts-upgradeable/token/ERC20/IERC20Upgradeable.sol",
       "solcConfig": {
-        "version": "0.7.4",
+        "version": "0.7.6",
         "settings": {
           "optimizer": {
             "enabled": true,
@@ -159,7 +159,7 @@
       "contentHash": "33cad0216fea16ce4baadc5603b84218",
       "sourceName": "@openzeppelin/contracts-upgradeable/math/SafeMathUpgradeable.sol",
       "solcConfig": {
-        "version": "0.7.4",
+        "version": "0.7.6",
         "settings": {
           "optimizer": {
             "enabled": true,
@@ -195,7 +195,7 @@
       "contentHash": "71b3ac8d4da61bb6c6708c12f56e3c1f",
       "sourceName": "@openzeppelin/contracts-upgradeable/proxy/Initializable.sol",
       "solcConfig": {
-        "version": "0.7.4",
+        "version": "0.7.6",
         "settings": {
           "optimizer": {
             "enabled": true,
@@ -233,7 +233,7 @@
       "contentHash": "aa72beb3bf14f8394b4a8a292d66589c",
       "sourceName": "@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol",
       "solcConfig": {
-        "version": "0.7.4",
+        "version": "0.7.6",
         "settings": {
           "optimizer": {
             "enabled": true,
@@ -265,11 +265,11 @@
       ]
     },
     "/home/bhupendra/kwikstater/contracts/KwikStater.sol": {
-      "lastModificationDate": 1617253692922,
-      "contentHash": "89a956d391fa91bf99201a48e4bc0f32",
+      "lastModificationDate": 1617536480045,
+      "contentHash": "bcea5322b5b66d1bdbab38b0cbf3469e",
       "sourceName": "contracts/KwikStater.sol",
       "solcConfig": {
-        "version": "0.7.4",
+        "version": "0.7.6",
         "settings": {
           "optimizer": {
             "enabled": true,
@@ -294,7 +294,7 @@
       },
       "imports": [
         "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
-        "./library/Address.sol",
+        "./libraries/Address.sol",
         "./bep20/BEP20Upgradeable.sol",
         "@openzeppelin/contracts/math/SafeMath.sol"
       ],
@@ -310,7 +310,7 @@
       "contentHash": "91a7735bfcbb48c7482f10f1083a8ed8",
       "sourceName": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
       "solcConfig": {
-        "version": "0.7.4",
+        "version": "0.7.6",
         "settings": {
           "optimizer": {
             "enabled": true,
@@ -344,12 +344,391 @@
         "OwnableUpgradeable"
       ]
     },
-    "/home/bhupendra/kwikstater/contracts/library/Address.sol": {
-      "lastModificationDate": 1617253692922,
-      "contentHash": "60f9bcdc2d696ad2f27d99fd00eef6d8",
-      "sourceName": "contracts/library/Address.sol",
+    "/home/bhupendra/kwikstater/node_modules/@openzeppelin/contracts/math/SafeMath.sol": {
+      "lastModificationDate": 1617253693078,
+      "contentHash": "e03e12206057e809eb76c5f681170c32",
+      "sourceName": "@openzeppelin/contracts/math/SafeMath.sol",
       "solcConfig": {
-        "version": "0.7.4",
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "devdoc",
+                "userdoc"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "SafeMath"
+      ]
+    },
+    "/home/bhupendra/kwikstater/contracts/auction/KwikAuction.sol": {
+      "lastModificationDate": 1617536156352,
+      "contentHash": "def8fb05db78d6174a10a29584e02a11",
+      "sourceName": "contracts/auction/KwikAuction.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "devdoc",
+                "userdoc"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "@openzeppelin/contracts/token/ERC20/SafeERC20.sol",
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "@openzeppelin/contracts/math/Math.sol",
+        "@openzeppelin/contracts/math/SafeMath.sol",
+        ".././libraries/IterableOrderedOrderSet.sol",
+        ".././libraries/SafeCast.sol",
+        ".././libraries/IdToAddressBiMap.sol",
+        ".././interfaces/AllowListVerifier.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.6"
+      ],
+      "artifacts": [
+        "KwikAuction"
+      ]
+    },
+    "/home/bhupendra/kwikstater/node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+      "lastModificationDate": 1617253693074,
+      "contentHash": "e0a41531d159d3a32f84b7a3ecf9fabb",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "devdoc",
+                "userdoc"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
+    },
+    "/home/bhupendra/kwikstater/node_modules/@openzeppelin/contracts/token/ERC20/SafeERC20.sol": {
+      "lastModificationDate": 1617253693074,
+      "contentHash": "33e22842646d746e5c4124c2fdc051aa",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/SafeERC20.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "devdoc",
+                "userdoc"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC20.sol",
+        "../../math/SafeMath.sol",
+        "../../utils/Address.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "SafeERC20"
+      ]
+    },
+    "/home/bhupendra/kwikstater/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
+      "lastModificationDate": 1617253693078,
+      "contentHash": "6748815a5b45c4aeeda56819f41190e0",
+      "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "devdoc",
+                "userdoc"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "Ownable"
+      ]
+    },
+    "/home/bhupendra/kwikstater/node_modules/@openzeppelin/contracts/math/Math.sol": {
+      "lastModificationDate": 1617253693078,
+      "contentHash": "e5c844515b04deabacef7eb872abc384",
+      "sourceName": "@openzeppelin/contracts/math/Math.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "devdoc",
+                "userdoc"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "Math"
+      ]
+    },
+    "/home/bhupendra/kwikstater/contracts/libraries/IterableOrderedOrderSet.sol": {
+      "lastModificationDate": 1617534300962,
+      "contentHash": "45a50c9b8672d343c2fb6ab01674a73a",
+      "sourceName": "contracts/libraries/IterableOrderedOrderSet.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "devdoc",
+                "userdoc"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/math/SafeMath.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.6"
+      ],
+      "artifacts": [
+        "IterableOrderedOrderSet"
+      ]
+    },
+    "/home/bhupendra/kwikstater/contracts/libraries/SafeCast.sol": {
+      "lastModificationDate": 1617534479445,
+      "contentHash": "8790c378d33090f3f81a6a13439ce323",
+      "sourceName": "contracts/libraries/SafeCast.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "devdoc",
+                "userdoc"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "SafeCast"
+      ]
+    },
+    "/home/bhupendra/kwikstater/contracts/libraries/IdToAddressBiMap.sol": {
+      "lastModificationDate": 1617534394261,
+      "contentHash": "9adde3d416879ea0175fb8d2fade2ae6",
+      "sourceName": "contracts/libraries/IdToAddressBiMap.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "devdoc",
+                "userdoc"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.7.6"
+      ],
+      "artifacts": [
+        "IdToAddressBiMap"
+      ]
+    },
+    "/home/bhupendra/kwikstater/contracts/interfaces/AllowListVerifier.sol": {
+      "lastModificationDate": 1617534593148,
+      "contentHash": "197c899739ab79a8c4280f6a53cd22df",
+      "sourceName": "contracts/interfaces/AllowListVerifier.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "devdoc",
+                "userdoc"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.8"
+      ],
+      "artifacts": [
+        "AllowListVerifier",
+        "AllowListVerifierHelper"
+      ]
+    },
+    "/home/bhupendra/kwikstater/node_modules/@openzeppelin/contracts/utils/Address.sol": {
+      "lastModificationDate": 1617253693078,
+      "contentHash": "7aa46886ff5abe7515496208a5e2ce5a",
+      "sourceName": "@openzeppelin/contracts/utils/Address.sol",
+      "solcConfig": {
+        "version": "0.7.6",
         "settings": {
           "optimizer": {
             "enabled": true,
@@ -380,12 +759,12 @@
         "Address"
       ]
     },
-    "/home/bhupendra/kwikstater/node_modules/@openzeppelin/contracts/math/SafeMath.sol": {
+    "/home/bhupendra/kwikstater/node_modules/@openzeppelin/contracts/utils/Context.sol": {
       "lastModificationDate": 1617253693078,
-      "contentHash": "e03e12206057e809eb76c5f681170c32",
-      "sourceName": "@openzeppelin/contracts/math/SafeMath.sol",
+      "contentHash": "2adbd82f6d055a4751566d4671512b03",
+      "sourceName": "@openzeppelin/contracts/utils/Context.sol",
       "solcConfig": {
-        "version": "0.7.4",
+        "version": "0.7.6",
         "settings": {
           "optimizer": {
             "enabled": true,
@@ -413,7 +792,43 @@
         ">=0.6.0 <0.8.0"
       ],
       "artifacts": [
-        "SafeMath"
+        "Context"
+      ]
+    },
+    "/home/bhupendra/kwikstater/contracts/libraries/Address.sol": {
+      "lastModificationDate": 1617253692922,
+      "contentHash": "60f9bcdc2d696ad2f27d99fd00eef6d8",
+      "sourceName": "contracts/libraries/Address.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "devdoc",
+                "userdoc"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.2 <0.8.0"
+      ],
+      "artifacts": [
+        "Address"
       ]
     }
   }

@@ -2,6 +2,1193 @@
   "version": "3",
   "log": [
     {
+      "Ownable": {
+        "inherit": [
+          "Context"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Ownable",
+            "src": "@openzeppelin/contracts/access/Ownable.sol:26"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Ownable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin/contracts/access/Ownable.sol:19"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "Math": {
+        "version": {
+          "withMetadata": "ac469e13b190857ae176b47ae6a1268dd8a4543c28f336d7f2bf652cdac2f156",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "SafeMath": {
+        "version": {
+          "withMetadata": "07af23d8cb8214aba2af74f3b983e8ba6ad07980f1d21b7ba02a1838ca81b4d1",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC20": {
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "SafeERC20": {
+        "version": {
+          "withMetadata": "d248097dd60bddc31341bf0802719882fdb4e1d7088b3f3b6f79fe97e202cece",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [
+          "SafeMath",
+          "Address"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Address": {
+        "version": {
+          "withMetadata": "8b964fdd2106ce7c9116f2cd213e79d16d4ebb2384a0fe7fdabdcfd64d441dbf",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "delegatecall",
+            "src": "@openzeppelin/contracts/utils/Address.sol:167"
+          }
+        ],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Context": {
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "KwikAuction": {
+        "version": {
+          "withMetadata": "374f62ca05883a5fdcbe090dca030a6efdacd3831ed531988d5047156c12b08b",
+          "withoutMetadata": "e55919b68547a48c1349295ab5128416671f7ff758fd6fc3fec5fa72496558db",
+          "linkedWithoutMetadata": "e55919b68547a48c1349295ab5128416671f7ff758fd6fc3fec5fa72496558db"
+        },
+        "inherit": [
+          "Ownable",
+          "Context"
+        ],
+        "libraries": [
+          "SafeERC20",
+          "SafeMath",
+          "SafeCast",
+          "IterableOrderedOrderSet",
+          "IdToAddressBiMap",
+          "AllowListVerifierHelper"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "KwikAuction",
+            "src": "contracts/auction/KwikAuction.sol:138"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "feeNumerator",
+            "src": "contracts/auction/KwikAuction.sol:140"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "feeReceiverUserId",
+            "src": "contracts/auction/KwikAuction.sol:142"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "KwikAuction",
+              "label": "auctionData",
+              "type": "t_mapping(t_uint256,t_struct(AuctionData)1213_storage)",
+              "src": "contracts/auction/KwikAuction.sol:43"
+            },
+            {
+              "contract": "KwikAuction",
+              "label": "sellOrders",
+              "type": "t_mapping(t_uint256,t_struct(Data)3138_storage)",
+              "src": "contracts/auction/KwikAuction.sol:129"
+            },
+            {
+              "contract": "KwikAuction",
+              "label": "auctionAccessManager",
+              "type": "t_mapping(t_uint256,t_address)",
+              "src": "contracts/auction/KwikAuction.sol:130"
+            },
+            {
+              "contract": "KwikAuction",
+              "label": "auctionAccessData",
+              "type": "t_mapping(t_uint256,t_bytes_storage)",
+              "src": "contracts/auction/KwikAuction.sol:131"
+            },
+            {
+              "contract": "KwikAuction",
+              "label": "registeredUsers",
+              "type": "t_struct(Data)2947_storage",
+              "src": "contracts/auction/KwikAuction.sol:133"
+            },
+            {
+              "contract": "KwikAuction",
+              "label": "numUsers",
+              "type": "t_uint64",
+              "src": "contracts/auction/KwikAuction.sol:135"
+            },
+            {
+              "contract": "KwikAuction",
+              "label": "auctionCounter",
+              "type": "t_uint256",
+              "src": "contracts/auction/KwikAuction.sol:136"
+            },
+            {
+              "contract": "KwikAuction",
+              "label": "feeNumerator",
+              "type": "t_uint256",
+              "src": "contracts/auction/KwikAuction.sol:140"
+            },
+            {
+              "contract": "KwikAuction",
+              "label": "feeReceiverUserId",
+              "type": "t_uint64",
+              "src": "contracts/auction/KwikAuction.sol:142"
+            }
+          ],
+          "types": {
+            "t_mapping(t_uint256,t_struct(AuctionData)1213_storage)": {
+              "label": "mapping(uint256 => struct KwikAuction.AuctionData)"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_struct(AuctionData)1213_storage": {
+              "label": "struct KwikAuction.AuctionData",
+              "members": [
+                {
+                  "label": "auctioningToken",
+                  "type": "t_contract(IERC20)615"
+                },
+                {
+                  "label": "biddingToken",
+                  "type": "t_contract(IERC20)615"
+                },
+                {
+                  "label": "orderCancellationEndDate",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "auctionEndDate",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "initialAuctionOrder",
+                  "type": "t_bytes32"
+                },
+                {
+                  "label": "minimumBiddingAmountPerOrder",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "interimSumBidAmount",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "interimOrder",
+                  "type": "t_bytes32"
+                },
+                {
+                  "label": "clearingPriceOrder",
+                  "type": "t_bytes32"
+                },
+                {
+                  "label": "volumeClearingPriceOrder",
+                  "type": "t_uint96"
+                },
+                {
+                  "label": "minFundingThresholdNotReached",
+                  "type": "t_bool"
+                },
+                {
+                  "label": "isAtomicClosureAllowed",
+                  "type": "t_bool"
+                },
+                {
+                  "label": "feeNumerator",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "minFundingThreshold",
+                  "type": "t_uint256"
+                }
+              ]
+            },
+            "t_contract(IERC20)615": {
+              "label": "contract IERC20"
+            },
+            "t_bytes32": {
+              "label": "bytes32"
+            },
+            "t_uint96": {
+              "label": "uint96"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_mapping(t_uint256,t_struct(Data)3138_storage)": {
+              "label": "mapping(uint256 => struct IterableOrderedOrderSet.Data)"
+            },
+            "t_struct(Data)3138_storage": {
+              "label": "struct IterableOrderedOrderSet.Data",
+              "members": [
+                {
+                  "label": "nextMap",
+                  "type": "t_mapping(t_bytes32,t_bytes32)"
+                },
+                {
+                  "label": "prevMap",
+                  "type": "t_mapping(t_bytes32,t_bytes32)"
+                }
+              ]
+            },
+            "t_mapping(t_bytes32,t_bytes32)": {
+              "label": "mapping(bytes32 => bytes32)"
+            },
+            "t_mapping(t_uint256,t_address)": {
+              "label": "mapping(uint256 => address)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_mapping(t_uint256,t_bytes_storage)": {
+              "label": "mapping(uint256 => bytes)"
+            },
+            "t_bytes_storage": {
+              "label": "bytes"
+            },
+            "t_struct(Data)2947_storage": {
+              "label": "struct IdToAddressBiMap.Data",
+              "members": [
+                {
+                  "label": "idToAddress",
+                  "type": "t_mapping(t_uint64,t_address)"
+                },
+                {
+                  "label": "addressToId",
+                  "type": "t_mapping(t_address,t_uint64)"
+                }
+              ]
+            },
+            "t_mapping(t_uint64,t_address)": {
+              "label": "mapping(uint64 => address)"
+            },
+            "t_uint64": {
+              "label": "uint64"
+            },
+            "t_mapping(t_address,t_uint64)": {
+              "label": "mapping(address => uint64)"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "AllowListVerifier": {
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "AllowListVerifierHelper": {
+        "version": {
+          "withMetadata": "407d3f382263693b1d41458177ae8d6d9106c358ed859bd0e48223a3e03c395f",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IdToAddressBiMap": {
+        "version": {
+          "withMetadata": "daf4104ef6490e50eb15e5490ed150e7c45613e6a8daac2c9a9a561e962bbf2f",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IterableOrderedOrderSet": {
+        "version": {
+          "withMetadata": "ae4ea1b2688309cb7c88f8a4fe97a0f2985b836f46d4f20654b99627c9e4b957",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [
+          "SafeMath",
+          "IterableOrderedOrderSet"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "SafeCast": {
+        "version": {
+          "withMetadata": "41dcf81ddbd6f9ae18e045a07f0d6a4a3f5fdc993983dba6727738bdf0d3c6f9",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      }
+    },
+    {
+      "OwnableUpgradeable": {
+        "inherit": [
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:20"
+            },
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "__gap",
+              "type": "t_array(t_uint256)49_storage",
+              "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:74"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "SafeMathUpgradeable": {
+        "version": {
+          "withMetadata": "c0974553969e6b5d45b7a1e51e78a1f879214062b55675065dbdb517f3c51ab0",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Initializable": {
+        "inherit": [],
+        "libraries": [
+          "AddressUpgradeable"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/Initializable.sol:25"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/Initializable.sol:30"
+            }
+          ],
+          "types": {
+            "t_bool": {
+              "label": "bool"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "ERC20Upgradeable": {
+        "version": {
+          "withMetadata": "f95d06f5a2ceb0ac271355c90f9098451b1463c02a5e61a944b1572942339fdd",
+          "withoutMetadata": "922eb2c24562e6fc8700766d9bff533b21cc13a1623a26a81e449e6ec4ff62b1",
+          "linkedWithoutMetadata": "922eb2c24562e6fc8700766d9bff533b21cc13a1623a26a81e449e6ec4ff62b1"
+        },
+        "inherit": [
+          "IERC20Upgradeable",
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [
+          "SafeMathUpgradeable"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_balances",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:37"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_allowances",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:39"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_totalSupply",
+              "type": "t_uint256",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:41"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:43"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:44"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_decimals",
+              "type": "t_uint8",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:45"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "__gap",
+              "type": "t_array(t_uint256)44_storage",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:312"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))"
+            },
+            "t_string_storage": {
+              "label": "string"
+            },
+            "t_uint8": {
+              "label": "uint8"
+            },
+            "t_array(t_uint256)44_storage": {
+              "label": "uint256[44]"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC20Upgradeable": {
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "AddressUpgradeable": {
+        "version": {
+          "withMetadata": "7f49b3f46d07d6efdba49d18c574392b28158d3374784c52fff6e42162c9052c",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "ContextUpgradeable": {
+        "inherit": [
+          "Initializable"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "ContextUpgradeable",
+              "label": "__gap",
+              "type": "t_array(t_uint256)50_storage",
+              "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:31"
+            }
+          ],
+          "types": {
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "Ownable": {
+        "inherit": [
+          "Context"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Ownable",
+            "src": "@openzeppelin/contracts/access/Ownable.sol:26"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Ownable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin/contracts/access/Ownable.sol:19"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "Math": {
+        "version": {
+          "withMetadata": "ac469e13b190857ae176b47ae6a1268dd8a4543c28f336d7f2bf652cdac2f156",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "SafeMath": {
+        "version": {
+          "withMetadata": "07af23d8cb8214aba2af74f3b983e8ba6ad07980f1d21b7ba02a1838ca81b4d1",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC20": {
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "SafeERC20": {
+        "version": {
+          "withMetadata": "d248097dd60bddc31341bf0802719882fdb4e1d7088b3f3b6f79fe97e202cece",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [
+          "SafeMath",
+          "Address"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Address": {
+        "version": {
+          "withMetadata": "27a9b69b8a2b8f5a87ab0608cc8a86472d5e37bd3a54f4ce1cf1c1803d126d8f",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Context": {
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "KwikStater": {
+        "version": {
+          "withMetadata": "27d2bf51d6ae86f3cd5edc4c554220a5fb2cdf74ee2a625c37530e4e11e8ceae",
+          "withoutMetadata": "ce3948fbae600c49c8c0a75d326581005be607574c69006a052e3d120190ea80",
+          "linkedWithoutMetadata": "ce3948fbae600c49c8c0a75d326581005be607574c69006a052e3d120190ea80"
+        },
+        "inherit": [
+          "OwnableUpgradeable",
+          "BEP20Upgradeable",
+          "ERC20Upgradeable",
+          "IERC20Upgradeable",
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [
+          "SafeMath",
+          "Address"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "KwikStater",
+              "label": "_launchBlock",
+              "type": "t_uint256",
+              "src": "contracts/KwikStater.sol:16"
+            },
+            {
+              "contract": "KwikStater",
+              "label": "_launchTimestamp",
+              "type": "t_uint256",
+              "src": "contracts/KwikStater.sol:17"
+            },
+            {
+              "contract": "KwikStater",
+              "label": "_whiteListSeconds",
+              "type": "t_uint256",
+              "src": "contracts/KwikStater.sol:19"
+            },
+            {
+              "contract": "KwikStater",
+              "label": "_whiteListAmounts",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/KwikStater.sol:21"
+            },
+            {
+              "contract": "KwikStater",
+              "label": "_whiteListPurchases",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/KwikStater.sol:23"
+            },
+            {
+              "contract": "KwikStater",
+              "label": "_isExchanger",
+              "type": "t_mapping(t_address,t_bool)",
+              "src": "contracts/KwikStater.sol:25"
+            }
+          ],
+          "types": {
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)"
+            },
+            "t_bool": {
+              "label": "bool"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "KwikAuction": {
+        "version": {
+          "withMetadata": "374f62ca05883a5fdcbe090dca030a6efdacd3831ed531988d5047156c12b08b",
+          "withoutMetadata": "e55919b68547a48c1349295ab5128416671f7ff758fd6fc3fec5fa72496558db",
+          "linkedWithoutMetadata": "e55919b68547a48c1349295ab5128416671f7ff758fd6fc3fec5fa72496558db"
+        },
+        "inherit": [
+          "Ownable",
+          "Context"
+        ],
+        "libraries": [
+          "SafeERC20",
+          "SafeMath",
+          "SafeCast",
+          "IterableOrderedOrderSet",
+          "IdToAddressBiMap",
+          "AllowListVerifierHelper"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "KwikAuction",
+            "src": "contracts/auction/KwikAuction.sol:138"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "feeNumerator",
+            "src": "contracts/auction/KwikAuction.sol:140"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "feeReceiverUserId",
+            "src": "contracts/auction/KwikAuction.sol:142"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "KwikAuction",
+              "label": "auctionData",
+              "type": "t_mapping(t_uint256,t_struct(AuctionData)2883_storage)",
+              "src": "contracts/auction/KwikAuction.sol:43"
+            },
+            {
+              "contract": "KwikAuction",
+              "label": "sellOrders",
+              "type": "t_mapping(t_uint256,t_struct(Data)4869_storage)",
+              "src": "contracts/auction/KwikAuction.sol:129"
+            },
+            {
+              "contract": "KwikAuction",
+              "label": "auctionAccessManager",
+              "type": "t_mapping(t_uint256,t_address)",
+              "src": "contracts/auction/KwikAuction.sol:130"
+            },
+            {
+              "contract": "KwikAuction",
+              "label": "auctionAccessData",
+              "type": "t_mapping(t_uint256,t_bytes_storage)",
+              "src": "contracts/auction/KwikAuction.sol:131"
+            },
+            {
+              "contract": "KwikAuction",
+              "label": "registeredUsers",
+              "type": "t_struct(Data)4678_storage",
+              "src": "contracts/auction/KwikAuction.sol:133"
+            },
+            {
+              "contract": "KwikAuction",
+              "label": "numUsers",
+              "type": "t_uint64",
+              "src": "contracts/auction/KwikAuction.sol:135"
+            },
+            {
+              "contract": "KwikAuction",
+              "label": "auctionCounter",
+              "type": "t_uint256",
+              "src": "contracts/auction/KwikAuction.sol:136"
+            },
+            {
+              "contract": "KwikAuction",
+              "label": "feeNumerator",
+              "type": "t_uint256",
+              "src": "contracts/auction/KwikAuction.sol:140"
+            },
+            {
+              "contract": "KwikAuction",
+              "label": "feeReceiverUserId",
+              "type": "t_uint64",
+              "src": "contracts/auction/KwikAuction.sol:142"
+            }
+          ],
+          "types": {
+            "t_mapping(t_uint256,t_struct(AuctionData)2883_storage)": {
+              "label": "mapping(uint256 => struct KwikAuction.AuctionData)"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_struct(AuctionData)2883_storage": {
+              "label": "struct KwikAuction.AuctionData",
+              "members": [
+                {
+                  "label": "auctioningToken",
+                  "type": "t_contract(IERC20)2064"
+                },
+                {
+                  "label": "biddingToken",
+                  "type": "t_contract(IERC20)2064"
+                },
+                {
+                  "label": "orderCancellationEndDate",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "auctionEndDate",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "initialAuctionOrder",
+                  "type": "t_bytes32"
+                },
+                {
+                  "label": "minimumBiddingAmountPerOrder",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "interimSumBidAmount",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "interimOrder",
+                  "type": "t_bytes32"
+                },
+                {
+                  "label": "clearingPriceOrder",
+                  "type": "t_bytes32"
+                },
+                {
+                  "label": "volumeClearingPriceOrder",
+                  "type": "t_uint96"
+                },
+                {
+                  "label": "minFundingThresholdNotReached",
+                  "type": "t_bool"
+                },
+                {
+                  "label": "isAtomicClosureAllowed",
+                  "type": "t_bool"
+                },
+                {
+                  "label": "feeNumerator",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "minFundingThreshold",
+                  "type": "t_uint256"
+                }
+              ]
+            },
+            "t_contract(IERC20)2064": {
+              "label": "contract IERC20"
+            },
+            "t_bytes32": {
+              "label": "bytes32"
+            },
+            "t_uint96": {
+              "label": "uint96"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_mapping(t_uint256,t_struct(Data)4869_storage)": {
+              "label": "mapping(uint256 => struct IterableOrderedOrderSet.Data)"
+            },
+            "t_struct(Data)4869_storage": {
+              "label": "struct IterableOrderedOrderSet.Data",
+              "members": [
+                {
+                  "label": "nextMap",
+                  "type": "t_mapping(t_bytes32,t_bytes32)"
+                },
+                {
+                  "label": "prevMap",
+                  "type": "t_mapping(t_bytes32,t_bytes32)"
+                }
+              ]
+            },
+            "t_mapping(t_bytes32,t_bytes32)": {
+              "label": "mapping(bytes32 => bytes32)"
+            },
+            "t_mapping(t_uint256,t_address)": {
+              "label": "mapping(uint256 => address)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_mapping(t_uint256,t_bytes_storage)": {
+              "label": "mapping(uint256 => bytes)"
+            },
+            "t_bytes_storage": {
+              "label": "bytes"
+            },
+            "t_struct(Data)4678_storage": {
+              "label": "struct IdToAddressBiMap.Data",
+              "members": [
+                {
+                  "label": "idToAddress",
+                  "type": "t_mapping(t_uint64,t_address)"
+                },
+                {
+                  "label": "addressToId",
+                  "type": "t_mapping(t_address,t_uint64)"
+                }
+              ]
+            },
+            "t_mapping(t_uint64,t_address)": {
+              "label": "mapping(uint64 => address)"
+            },
+            "t_uint64": {
+              "label": "uint64"
+            },
+            "t_mapping(t_address,t_uint64)": {
+              "label": "mapping(address => uint64)"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "BEP20Upgradeable": {
+        "version": {
+          "withMetadata": "eb4eca8fdca0fecef17fd674d92acaad89c645c2d3a98484f9c0942683cd5685",
+          "withoutMetadata": "922eb2c24562e6fc8700766d9bff533b21cc13a1623a26a81e449e6ec4ff62b1",
+          "linkedWithoutMetadata": "922eb2c24562e6fc8700766d9bff533b21cc13a1623a26a81e449e6ec4ff62b1"
+        },
+        "inherit": [
+          "ERC20Upgradeable",
+          "IERC20Upgradeable",
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "AllowListVerifier": {
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "AllowListVerifierHelper": {
+        "version": {
+          "withMetadata": "407d3f382263693b1d41458177ae8d6d9106c358ed859bd0e48223a3e03c395f",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IdToAddressBiMap": {
+        "version": {
+          "withMetadata": "daf4104ef6490e50eb15e5490ed150e7c45613e6a8daac2c9a9a561e962bbf2f",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IterableOrderedOrderSet": {
+        "version": {
+          "withMetadata": "ae4ea1b2688309cb7c88f8a4fe97a0f2985b836f46d4f20654b99627c9e4b957",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [
+          "SafeMath",
+          "IterableOrderedOrderSet"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "SafeCast": {
+        "version": {
+          "withMetadata": "41dcf81ddbd6f9ae18e045a07f0d6a4a3f5fdc993983dba6727738bdf0d3c6f9",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      }
+    },
+    {
       "OwnableUpgradeable": {
         "inherit": [
           "ContextUpgradeable",
