@@ -49,27 +49,5 @@ contract KwikStater is BEP20Upgradeable, OwnableUpgradeable {
         }
     }
 
-    function _beforeTokenTransfer(address sender, address recipient, uint256 amount) internal override {
-        
-        if(_launchBlock == 0 && !_isExchanger[sender] && _isExchanger[recipient]) {
-            _launchBlock = block.number;
-            _launchTimestamp = block.timestamp;
-        }
-        
-        if(_isExchanger[sender] && !_isExchanger[recipient]) {
-            //buying
-            if(block.timestamp - _launchTimestamp <= _whiteListSeconds) {
-                
-                uint256 whiteListRemaining = 0;
-                if(_whiteListPurchases[recipient] < _whiteListAmounts[recipient])
-                    whiteListRemaining = _whiteListAmounts[recipient].sub(_whiteListPurchases[recipient]);
-                    
-                require(amount <= whiteListRemaining, "Initial launch is whitelisted, please check if eligible or try after initial period");
-                _whiteListPurchases[recipient] = _whiteListPurchases[recipient].add(amount);
-            }
-        }
-        
-    }
-
 
 }
